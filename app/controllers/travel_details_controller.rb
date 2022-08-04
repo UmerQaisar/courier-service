@@ -2,6 +2,7 @@ class TravelDetailsController < ApplicationController
 
   before_action :find_travel_detail, only: [:edit, :update]
 
+  # index action
   def index
     @travel_details = TravelDetail.all
   end
