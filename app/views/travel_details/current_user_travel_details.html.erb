@@ -1,0 +1,19 @@
+<div class="container my-5" style="width: 70%">
+
+
+  <% @travel_details.each do |travel_detail| %>
+
+    <div style="margin-bottom: 60px">
+
+      <%= render 'travel_detail', locale = {travel_detail: travel_detail}%>
+
+      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <%= link_to 'Details', travel_detail_orders_path(travel_detail), class: 'btn btn-outline-success me-md-2' %>
+      </div>
+
+    </div>
+
+  <% end %>
+
+
+</div>

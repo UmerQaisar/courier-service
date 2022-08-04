@@ -1,0 +1,40 @@
+
+
+
+  <div class="btn btn-primary mb-1">Traveller Details :</div>
+  <div class="btn btn-outline-primary mb-1"><%= travel_detail.user.name %></div>
+  <div class="btn btn-outline-primary mb-1"><%= travel_detail.user.email %></div>
+  <div class="btn btn-outline-primary mb-1"><%= travel_detail.user.contact %></div>
+
+  <table class="table table-primary table-bordered  table-striped" >
+    <tr>
+      <th>From</th>
+      <th>To</th>
+      <th>Departure Date</th>
+      <th>Arrival Date</th>
+      <th>Capacity</th>
+      <th>Going By</th>
+
+    </tr>
+
+    <tr>
+      <td><%= travel_detail.from %></td>
+      <td><%= travel_detail.to %></td>
+      <td><%= travel_detail.departure_time.to_formatted_s(:long_ordinal) %></td>
+      <td><%= travel_detail.arrival_time.to_formatted_s(:long_ordinal) %></td>
+      <td><%= travel_detail.capacity %></td>
+      <td><%= travel_detail.going_by %></td>
+    </tr>
+  </table>
+
+
+  <% if travel_detail.additional_message.present? %>
+    <div class="card" style="margin-bottom: 5px">
+      <div class="card-body">
+        <h5 class="card-title">Additional Message</h5>
+        <p><%= travel_detail.additional_message %></p>
+      </div>
+    </div>
+  <% end %>
+
+

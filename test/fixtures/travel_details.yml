@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  to: MyString
+  from: MyString
+  departure_time: 2022-08-03 14:06:55
+  arrival_time: 2022-08-03 14:06:55
+  additional_message: MyString
+
+two:
+  to: MyString
+  from: MyString
+  departure_time: 2022-08-03 14:06:55
+  arrival_time: 2022-08-03 14:06:55
+  additional_message: MyString

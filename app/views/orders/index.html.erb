@@ -1,0 +1,63 @@
+<div class="container" >
+
+  <h3 style="margin: 40px 0px 20px 0px" >Service Details</h3>
+
+  <div >
+    <%=  render 'travel_details/travel_detail', locale = {travel_detail: @travel_detail}%>
+
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+      <%= link_to 'Edit Details', edit_travel_detail_path(@travel_detail), class: 'btn btn-outline-success me-md-2' %>
+    </div>
+  </div>
+
+  <h3 style="margin: 70px 0px 40px 0px" >Orders Placed on this Service</h3>
+
+  <% if @orders.any? %>
+
+    <% @orders.each do |order| %>
+
+      <div class="row">
+
+        <div class="col-3">
+          <div class="card" style="width: 20rem;">
+          <div class="card-header">
+            Package Details
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><%= order.package_details %></li>
+          </ul>
+          <div class="card-header">
+            Weight
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><%= order.weight %></li>
+          </ul>
+        </div>
+        </div>
+
+        <div class="col-3">
+          <div class="card" style="width: 20rem">
+
+            <div class="card-header">
+              Customer Details
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><%= order.user.name %></li>
+              <li class="list-group-item"><%= order.user.email %></li>
+              <li class="list-group-item"><%= order.user.contact %></li>
+            </ul>
+
+          </div>
+        </div>
+
+      </div>
+
+      <hr class="divider w-50" style="margin-bottom: 30px; margin-top: 30px"></hr>
+
+    <% end %>
+
+  <% else %>
+    <h5>No Orders on this service yet</h5>
+  <% end %>
+
+</div>

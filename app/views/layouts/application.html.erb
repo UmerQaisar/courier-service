@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Courier</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <%= render 'shared/navbar' %>
+
+    <% if flash[:notice] %>
+      <p class="alert alert-primary mx-5 my-2"><%= notice %></p>
+    <% end %>
+
+    <% if flash[:alert] %>
+      <p class="alert alert-danger mx-5 my-2"><%= alert %></p>
+    <% end %>
+
+    <%= yield %>
+  </body>
+</html>

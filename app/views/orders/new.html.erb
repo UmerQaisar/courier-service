@@ -1,0 +1,46 @@
+
+<div class="container" >
+
+  <h3 style="margin: 40px 0px 20px 0px" >Service Details</h3>
+
+  <%=  render 'travel_details/travel_detail', locale = {travel_detail: @travel_detail}%>
+
+
+
+
+  <div
+    class="container text-center border rounded bg-light"
+    style="width: 15cm; margin-top: 70px; padding: 20px"
+  >
+
+  <h3 style="margin: 10px 0px 30px 0px" >Your Order Details</h3>
+
+  <%= form_with model: [@travel_detail,@order], local: true do |f| %>
+
+    <div class="input-group mb-4">
+      <%= f.label 'Package Details', class:'input-group-text' %>
+      <%= f.text_field :package_details , class:'form-control' %>
+
+      <% if @order.errors.messages[:package_details].any? %>
+        <div style="color: #B00100", class="form-control"><%="'From' #{@order.errors.messages[:package_details][0]}" %></div>
+      <% end %>
+    </div>
+
+    <div class="input-group mb-4">
+      <%= f.label 'Weight', class:'input-group-text' %>
+      <%= f.text_field :weight , class:'form-control' %>
+
+      <% if @order.errors.messages[:weight].any? %>
+        <div style="color: #B00100", class="form-control"><%="'From' #{@order.errors.messages[:weight][0]}" %></div>
+      <% end %>
+    </div>
+
+    <div class="">
+      <%= f.submit 'Add Order', class: 'col-6 btn btn-primary' %>
+    </div>
+
+  <% end %>
+
+  </div>
+
+</div>
