@@ -51,21 +51,34 @@
 
       <form class="d-flex">
 
-        <% if user_signed_in? %>
-          <div class="form-control btn btn-danger me-2">
-            <%= link_to 'Sign Out' , destroy_user_session_path, method: :delete, class:"nav-link" %>
-          </div>
-        <% else %>
-          <div class="form-control btn btn-success me-2">
-            <%= link_to 'Log In' , new_user_session_path, class:"nav-link" %>
-          </div>
-          <div class="form-control btn btn-outline-success me-2">
-            <%= link_to 'Register' , new_user_registration_path, class:"nav-link" %>
-          </div>
+        <%# if user_signed_in? %>
+<!--          <div class="form-control btn btn-danger me-2">-->
+            <%#= link_to 'Sign Out' , destroy_user_session_path, method: :delete, class:"nav-link" %>
+<!--          </div>-->
+        <%# else %>
+<!--          <div class="form-control btn btn-success me-2">-->
+            <%#= link_to 'Log In' , new_user_session_path, class:"nav-link" %>
+<!--          </div>-->
+<!--          <div class="form-control btn btn-outline-success me-2">-->
+            <%#= link_to 'Register' , new_user_registration_path, class:"nav-link" %>
+<!--          </div>-->
+
+        <%# end %>
+
+
+<!--          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">-->
+<!--          <button class="btn btn-outline-success" type="submit">Search</button>-->
+
+        <% if request.path == travel_details_path %>
+
+          <%= form_with url: travel_details_path, method: :get do %>
+            <%= text_field_tag :from_search, params[:from_search], placeholder: "From", class:"form-control me-2" %>
+            <%= text_field_tag :to_search , params[:to_search],  placeholder: "To", class:"form-control me-2"%>
+            <%= submit_tag 'Search', class:"btn btn-outline-success" %>
+          <% end %>
 
         <% end %>
-        <!--        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">-->
-        <!--        <button class="btn btn-outline-success" type="submit">Search</button>-->
+
       </form>
     </div>
   </div>
