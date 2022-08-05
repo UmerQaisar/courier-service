@@ -12,7 +12,7 @@
 
   <h3 style="margin: 70px 0px 40px 0px" >Orders Placed on this Service</h3>
 
-  <% if @orders.any? %>
+  <% if @orders.try(:any?) %>
 
     <% @orders.each do |order| %>
 

@@ -15,12 +15,13 @@ class TravelDetailsController < ApplicationController
   def edit
   end
 
+
   def create
     @travel_detail = current_user.travel_details.new(travel_detail_params)
 
     if @travel_detail.save
       flash[:notice] = 'Service Added To The List'
-      render 'home/homepage'
+      redirect_to travel_details_path
     else
       render 'new'
     end

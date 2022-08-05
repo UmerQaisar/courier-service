@@ -12,12 +12,13 @@ class OrdersController < ApplicationController
   end
 
   def create
+    @travel_detail = TravelDetail.find(params[:travel_detail_id])
     @order = @travel_detail.orders.new(order_params)
     @order.user_id = current_user.id
 
     if @order.save
       flash[:notice] = "Order Added  to The Service"
-      render 'index'
+      redirect_to travel_details_path
     else
       render 'new'
     end

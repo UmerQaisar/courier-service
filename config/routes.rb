@@ -10,5 +10,10 @@ Rails.application.routes.draw do
   root to: 'home#homepage'
 
   get 'homepage', to: 'home#homepage'
+
+  # custom route for get current user orders
+  # from home controller
+  get :current_user_orders, to: 'home#current_user_orders'
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

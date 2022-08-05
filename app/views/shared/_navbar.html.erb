@@ -23,6 +23,10 @@
           <%= link_to 'Available Services', travel_details_path, class: "nav-link #{active_class(travel_details_path)}" %>
         </li>
 
+        <li>
+          <%= link_to 'My Orders', current_user_orders_path, class: "nav-link #{active_class(current_user_orders_path)}" %>
+        </li> 
+
 <!--        <li class="nav-item">-->
           <%#= link_to 'Dash Board', dashboard_path, class: "nav-link #{active_class(dashboard_path)}" %>
 <!--        </li>-->
