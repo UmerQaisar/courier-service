@@ -6,7 +6,7 @@
 
     <div class="input-group mb-4">
       <%= f.label 'Going From', class:'input-group-text' %>
-      <%= f.text_field :from , class:'form-control' %>
+      <%= f.text_field :from , class:'form-control place-autocomplete' %>
 
       <% if @travel_detail.errors.messages[:from].any? %>
         <div style="color: #B00100", class="form-control"><%="'From' #{@travel_detail.errors.messages[:from][0]}" %></div>
@@ -17,7 +17,7 @@
 
     <div class="input-group mb-4">
       <%= f.label 'Going To', class:'input-group-text' %>
-      <%= f.text_field :to , class:'form-control' %>
+      <%= f.text_field :to , class:'form-control place-autocomplete' %>
 
       <% if @travel_detail.errors.messages[:to].any? %>
         <div style="color: #B00100", class="form-control"><%="'To' #{@travel_detail.errors.messages[:to][0]}" %></div>

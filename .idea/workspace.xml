@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="12bd5dbf-4fcb-4d01-ab0b-bbf1b315fff3" name="Changes" comment="Second Commit">
+    <list default="true" id="12bd5dbf-4fcb-4d01-ab0b-bbf1b315fff3" name="Changes" comment="Third Commit: Task 1">
+      <change afterPath="$PROJECT_DIR$/app/javascript/packs/places_autocomplete.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/travel_details_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/travel_details_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/travel_detail.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/travel_detail.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/shared/_navbar.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/shared/_navbar.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/config/manifest.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/config/manifest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/travel_details/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/travel_details/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/travel_details/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/travel_details/new.html.erb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +35,11 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;inlay.hints&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/javascript/packs" />
+    </key>
+  </component>
   <component name="RunManager" selected="Rails.Development: courier">
     <configuration name="Development: courier" type="RailsRunConfigurationType" factoryName="Rails">
       <module name="courier" />
@@ -146,6 +153,7 @@
       <workItem from="1659507477816" duration="25740000" />
       <workItem from="1659594589311" duration="21647000" />
       <workItem from="1659680096554" duration="5491000" />
+      <workItem from="1660112155391" duration="10352000" />
     </task>
     <task id="LOCAL-00001" summary="Second Commit">
       <created>1659625514259</created>

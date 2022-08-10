@@ -1,2 +1,29 @@
+<%= javascript_pack_tag 'places_autocomplete' %>
 
 <%= render 'form' %>
+
+<script>
+
+  let autocomplete;
+
+  function initMap(){
+
+      const input_to = document.getElementById('travel_detail_to')
+      const input_from = document.getElementById('travel_detail_from')
+
+      const options = {
+          componentRestrictions: { country: "PK" },
+          fields: ["address_components", "geometry", "icon", "name"],
+          strictBounds: false,
+          types: ["establishment"],
+      };
+
+      autocomplete = new google.maps.places.Autocomplete(input_to, options);
+      autocomplete = new google.maps.places.Autocomplete(input_from, options);
+  }
+
+</script>
+
+<script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdIQygbTt6E8I-idAJtDUiLBYwXAio4dE&libraries=places&callback=initMap">
+</script>
