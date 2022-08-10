@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="12bd5dbf-4fcb-4d01-ab0b-bbf1b315fff3" name="Changes" comment="Third Commit: Task 1">
-      <change afterPath="$PROJECT_DIR$/app/javascript/packs/places_autocomplete.js" afterDir="false" />
+    <list default="true" id="12bd5dbf-4fcb-4d01-ab0b-bbf1b315fff3" name="Changes" comment="Fifth Commit: Added Google Place Autocomplete">
+      <change afterPath="$PROJECT_DIR$/app/policies/OrderPolicy.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/policies/TravelDetailPolicy.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/courier.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/courier.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/config/manifest.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/config/manifest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/orders_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/orders_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/travel_details_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/travel_details_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/travel_detail.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/travel_detail.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/shared/_navbar.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/shared/_navbar.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/travel_details/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/travel_details/_form.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/travel_details/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/travel_details/new.html.erb" afterDir="false" />
     </list>
@@ -25,16 +32,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/yasir-southville/courier&quot;,
-    &quot;ruby.rails.projectView.checked&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;inlay.hints&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/yasir-southville/courier",
+    "nodejs_package_manager_path": "yarn",
+    "ruby.rails.projectView.checked": "true",
+    "settings.editor.selected.configurable": "inlay.hints"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/javascript/packs" />
@@ -153,7 +161,7 @@
       <workItem from="1659507477816" duration="25740000" />
       <workItem from="1659594589311" duration="21647000" />
       <workItem from="1659680096554" duration="5491000" />
-      <workItem from="1660112155391" duration="10352000" />
+      <workItem from="1660112155391" duration="21885000" />
     </task>
     <task id="LOCAL-00001" summary="Second Commit">
       <created>1659625514259</created>
@@ -162,7 +170,21 @@
       <option name="project" value="LOCAL" />
       <updated>1659625514259</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Fifth Commit: Added Google Place Autocomplete">
+      <created>1660125070384</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1660125070384</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Fifth Commit: Added Google Place Autocomplete">
+      <created>1660125154204</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1660125154204</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,6 +203,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Second Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Second Commit" />
+    <MESSAGE value="Fifth Commit: Added Google Place Autocomplete" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fifth Commit: Added Google Place Autocomplete" />
   </component>
 </project>

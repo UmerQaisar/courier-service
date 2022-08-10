@@ -9,9 +9,11 @@ class OrdersController < ApplicationController
 
   def new
     @order = @travel_detail.orders.new
+    authorize @order
   end
 
   def create
+
     @travel_detail = TravelDetail.find(params[:travel_detail_id])
     @order = @travel_detail.orders.new(order_params)
     @order.user_id = current_user.id

@@ -28,6 +28,7 @@ class TravelDetailsController < ApplicationController
   end
 
   def update
+    authorize @travel_detail
 
     if @travel_detail.update(travel_detail_params)
       flash[:notice] = "Service Updated"

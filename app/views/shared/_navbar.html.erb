@@ -25,49 +25,28 @@
 
         <li>
           <%= link_to 'My Orders', current_user_orders_path, class: "nav-link #{active_class(current_user_orders_path)}" %>
-        </li> 
-
-<!--        <li class="nav-item">-->
-          <%#= link_to 'Dash Board', dashboard_path, class: "nav-link #{active_class(dashboard_path)}" %>
-<!--        </li>-->
-
-<!--        <li class="nav-item">-->
-          <%#= link_to 'Edit User', edit_user_registration_path, class:"nav-link #{active_class(edit_user_registration_path)}" %>
-<!--        </li>-->
-
-<!--        <li class="nav-item">-->
-          <%#= link_to 'Add Movie', new_movie_path, class:"nav-link #{active_class(new_movie_path)}" %>
-<!--        </li>-->
-
-<!--        <li class="nav-item">-->
-          <%#= link_to 'All Movies', movies_path, class:"nav-link #{active_class(movies_path)}" %>
-<!--        </li>-->
-
-<!--        <li class="nav-item">-->
-          <%#= link_to 'My Movies', current_user_movies_movies_path, class:"nav-link #{active_class(current_user_movies_movies_path)}" %>
-<!--        </li>-->
+        </li>
 
       </ul>
 
       <form class="d-flex">
 
-        <%# if user_signed_in? %>
-<!--          <div class="form-control btn btn-danger me-2">-->
-            <%#= link_to 'Sign Out' , destroy_user_session_path, method: :delete, class:"nav-link" %>
-<!--          </div>-->
-        <%# else %>
-<!--          <div class="form-control btn btn-success me-2">-->
-            <%#= link_to 'Log In' , new_user_session_path, class:"nav-link" %>
-<!--          </div>-->
-<!--          <div class="form-control btn btn-outline-success me-2">-->
-            <%#= link_to 'Register' , new_user_registration_path, class:"nav-link" %>
-<!--          </div>-->
+        <% if user_signed_in? %>
+          <% if request.path != travel_details_path %>
+            <div class="form-control btn btn-danger me-2">
+              <%= link_to 'Sign Out' , destroy_user_session_path, method: :delete, class:"nav-link" %>
+            </div>
+          <% end %>
+        <% else %>
+          <div class="form-control btn btn-success me-2">
+            <%= link_to 'Log In' , new_user_session_path, class:"nav-link" %>
+          </div>
+          <div class="form-control btn btn-outline-success me-2">
+            <%= link_to 'Register' , new_user_registration_path, class:"nav-link" %>
+          </div>
 
-        <%# end %>
+        <% end %>
 
-
-<!--          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">-->
-<!--          <button class="btn btn-outline-success" type="submit">Search</button>-->
 
         <% if request.path == travel_details_path %>
 

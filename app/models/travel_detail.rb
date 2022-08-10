@@ -11,11 +11,11 @@ class TravelDetail < ApplicationRecord
   def self.search(from_search, to_search)
 
     if from_search.present? && to_search.present?
-      return TravelDetail.where(:from => from_search ).where(:to => to_search)
+      return TravelDetail.where("\"from\" like ?", "%#{from_search}%").where("\"to\" like ?", "%#{to_search}%")
     else if from_search.present?
-          return TravelDetail.where(:from => from_search )
+          return TravelDetail.where("\"from\" like ?", "%#{from_search}%")
         else if to_search.present?
-              return TravelDetail.where(:to => to_search)
+              return TravelDetail.where("\"to\" like ?", "%#{to_search}%")
             else
               TravelDetail.all
              end

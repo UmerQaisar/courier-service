@@ -9,6 +9,8 @@ gem 'devise'
 
 gem 'jquery-rails'
 
+gem 'popper_js', '~> 2.11.5'
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.0.5', '>= 6.0.5.1'
@@ -59,3 +61,5 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem "pundit", "~> 2.2"

@@ -75,6 +75,7 @@
     <orderEntry type="library" scope="PROVIDED" name="popper_js (v2.11.5, rbenv: 2.6.10) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="public_suffix (v4.0.7, rbenv: 2.6.10) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="puma (v4.3.12, rbenv: 2.6.10) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="pundit (v2.2.0, rbenv: 2.6.10) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="racc (v1.6.0, rbenv: 2.6.10) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack (v2.2.4, rbenv: 2.6.10) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack-proxy (v0.7.2, rbenv: 2.6.10) [gem]" level="application" />
