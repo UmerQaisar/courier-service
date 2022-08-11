@@ -6,7 +6,7 @@ class TravelDetailPolicy < ApplicationPolicy
     @travel_detail = travel_detail
   end
 
-  def update?
+  def edit?
     travel_detail.user_id == user.id
   end
 

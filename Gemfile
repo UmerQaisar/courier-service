@@ -11,6 +11,8 @@ gem 'jquery-rails'
 
 gem 'popper_js', '~> 2.11.5'
 
+gem 'dotenv-rails', groups: [:development, :test]
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.0.5', '>= 6.0.5.1'
