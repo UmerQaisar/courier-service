@@ -39,7 +39,7 @@ class TravelDetailsController < ApplicationController
   end
 
   def current_user_travel_details
-    @travel_details = TravelDetail.get_current_user_travel_details(current_user.id)
+    @travel_details = TravelDetail.get_current_user_travel_details(current_user.id).paginate(page: params[:page], per_page: 5)
   end
 
   private
