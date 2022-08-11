@@ -2,15 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="12bd5dbf-4fcb-4d01-ab0b-bbf1b315fff3" name="Changes" comment="Added API Key in Credentials File">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/courier.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/courier.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/travel_details_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/travel_details_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/policies/TravelDetailPolicy.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/policies/TravelDetailPolicy.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/travel_details/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/travel_details/index.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/travel_details/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/travel_details/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/locales/en.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/locales/en.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,7 +157,7 @@
       <workItem from="1659594589311" duration="21647000" />
       <workItem from="1659680096554" duration="5491000" />
       <workItem from="1660112155391" duration="22368000" />
-      <workItem from="1660198400022" duration="11536000" />
+      <workItem from="1660198400022" duration="14390000" />
     </task>
     <task id="LOCAL-00001" summary="Second Commit">
       <created>1659625514259</created>

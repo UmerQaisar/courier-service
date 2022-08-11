@@ -7,6 +7,10 @@ gem 'bootstrap', '~> 5.2.0'
 
 gem 'devise'
 
+gem 'will_paginate', '~> 3.3'
+
+gem 'will_paginate-bootstrap4'
+
 gem 'jquery-rails'
 
 gem 'popper_js', '~> 2.11.5'
