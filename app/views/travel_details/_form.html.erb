@@ -50,8 +50,8 @@
     <% end %>
 
     <div class="input-group mb-4">
-      <%= f.label 'Capacity', class:'input-group-text' %>
-      <%= f.text_field :capacity , class:'form-control' %>
+      <%= f.label 'Capacity (KG)', class:'input-group-text' %>
+      <%= f.number_field :capacity, step: 0.5 , class:'form-control' %>
 
       <% if @travel_detail.errors.messages[:capacity].any? %>
         <div style="color: #B00100", class="form-control"><%="Capacity #{@travel_detail.errors.messages[:capacity][0]}" %></div>

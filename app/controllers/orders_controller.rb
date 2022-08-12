@@ -22,7 +22,7 @@ class OrdersController < ApplicationController
       flash[:notice] = "Order Added  to The Service"
       redirect_to travel_details_path
     else
-      render 'new'
+      render :new
     end
   end
 

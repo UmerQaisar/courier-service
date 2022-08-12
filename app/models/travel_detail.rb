@@ -26,7 +26,7 @@ class TravelDetail < ApplicationRecord
 
   #validations
   validates :to, :from, :capacity, :arrival_time, :departure_time, presence: true
-  validate :dates_check
+  validate :dates_check, :capacity_check
 
   def dates_check
     if arrival_time.present? && arrival_time < Time.now
@@ -40,8 +40,12 @@ class TravelDetail < ApplicationRecord
     if departure_time.present? && arrival_time.present? && arrival_time <= departure_time
       errors.add(:arrival_time, 'Arrival Time cannot be earlier than Departure Time')
     end
+  end
 
-
+  def capacity_check
+    if capacity < '0'
+      errors.add(:capacity, 'Capacity cannot be negative')
+    end
   end
 
 end
