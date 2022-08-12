@@ -1,29 +1,28 @@
-
 <div class="container my-5" style="width: 70%">
 
+  <% if @travel_details.any? %>
+    <% @travel_details.each do |travel_detail| %>
 
-  <% @travel_details.each do |travel_detail| %>
+      <div style="margin-bottom: 60px">
 
-    <div style="margin-bottom: 60px">
+        <%= render 'travel_detail', locale = { travel_detail: travel_detail } %>
 
-      <%= render 'travel_detail', locale = {travel_detail: travel_detail}%>
-
-<!--      Place Order Button or Details Button-->
-      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-        <% if travel_detail.user.id != current_user.id %>
+        <!--      Place Order Button or Details Button-->
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <% if travel_detail.user.id != current_user.id %>
             <%= link_to 'Place Order', new_travel_detail_order_path(travel_detail), class: 'btn btn-outline-danger me-md-2' %>
-        <% else %>
-          <%= link_to 'Details', travel_detail_orders_path(travel_detail), class: 'btn btn-outline-success me-md-2' %>
-        <% end %>
+          <% else %>
+            <%= link_to 'Details', travel_detail_orders_path(travel_detail), class: 'btn btn-outline-success me-md-2' %>
+          <% end %>
+        </div>
+
       </div>
 
-    </div>
-
+    <% end %>
+    <%= will_paginate @travel_details %>
+  <% else %>
+    <h5 class="text-center no-service-available h-100">No Service Available</h5>
   <% end %>
-
-  <%= will_paginate @travel_details %>
-
 
 
 </div>
-
