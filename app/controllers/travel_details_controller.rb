@@ -20,7 +20,21 @@ class TravelDetailsController < ApplicationController
 
 
   def create
+
+    byebug
+
     @travel_detail = current_user.travel_details.new(travel_detail_params)
+
+    # # Using Geocoder to find longitude and latitude
+    # results_from = Geocoder.search(params[:travel_detail][:from])
+    # if (geo = results_from.first)
+    #   @travel_detail.from_latlng   = geo.coordinates
+    # end
+    #
+    # results_to = Geocoder.search(params[:travel_detail][:to])
+    # if (geo = results_to.first)
+    #   @travel_detail.to_latlng   = geo.coordinates
+    # end
 
     if @travel_detail.save
       flash[:notice] = 'Service Added To The List'
@@ -51,7 +65,7 @@ class TravelDetailsController < ApplicationController
   end
 
   def travel_detail_params
-    params.require(:travel_detail).permit(:to, :from, :departure_time,:arrival_time,:capacity, :additional_message, :going_by)
+    params.require(:travel_detail).permit(:to, :from, :departure_time,:arrival_time,:capacity, :additional_message, :going_by, :from_latlng, :to_latlng)
   end
 
 end

@@ -5,24 +5,25 @@ class TravelDetail < ApplicationRecord
   has_many :orders, dependent: :destroy
 
   # Scopes
-  scope :get_current_user_travel_details, -> (current_user_id){where(:user_id => current_user_id)}
+  scope :get_current_user_travel_details, -> (current_user_id) { where(:user_id => current_user_id) }
 
   #Method to Search a Specific Record
   def self.search(from_search, to_search)
 
     if from_search.present? && to_search.present?
       return TravelDetail.where("\"from\" like ?", "%#{from_search}%").where("\"to\" like ?", "%#{to_search}%")
-    else if from_search.present?
-          return TravelDetail.where("\"from\" like ?", "%#{from_search}%")
-        else if to_search.present?
-              return TravelDetail.where("\"to\" like ?", "%#{to_search}%")
-            else
-              TravelDetail.all
-             end
+    else
+      if from_search.present?
+        return TravelDetail.where("\"from\" like ?", "%#{from_search}%")
+      else
+        if to_search.present?
+          return TravelDetail.where("\"to\" like ?", "%#{to_search}%")
+        else
+          TravelDetail.all
         end
+      end
     end
   end
-
 
   #validations
   validates :to, :from, :capacity, :arrival_time, :departure_time, presence: true

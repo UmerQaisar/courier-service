@@ -96,6 +96,9 @@ GEM
     execjs (2.8.1)
     ffaker (2.21.0)
     ffi (1.15.5)
+    geocoder (1.8.0)
+    geocomplete_rails (1.7.0)
+      railties (>= 3.1)
     globalid (1.0.0)
       activesupport (>= 5.0)
     i18n (1.12.0)
@@ -243,6 +246,8 @@ DEPENDENCIES
   devise
   dotenv-rails
   ffaker
+  geocoder (~> 1.8)
+  geocomplete_rails
   jbuilder (~> 2.7)
   jquery-rails
   listen (~> 3.2)

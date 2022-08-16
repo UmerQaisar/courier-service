@@ -1,28 +1,21 @@
-
 <%= render 'form' %>
+
+
+
+<script type="text/javascript" src="https://unpkg.com/geocomplete@1.7.0/jquery.geocomplete.js"></script>
 
 <script>
 
-  let autocomplete;
+    $('#travel_detail_from').geocomplete({
+        details: ".details_from",
+        detailsAttribute: "data-geo"
+    });
 
-  function initMap(){
-
-      const input_to = document.getElementById('travel_detail_to')
-      const input_from = document.getElementById('travel_detail_from')
-
-      const options = {
-          componentRestrictions: { country: "PK" },
-          fields: ["address_components", "geometry", "icon", "name"],
-          strictBounds: false,
-          types: ["establishment"],
-      };
-
-      autocomplete = new google.maps.places.Autocomplete(input_to, options);
-      autocomplete = new google.maps.places.Autocomplete(input_from, options);
-  }
+    $('#travel_detail_to').geocomplete({
+        details: ".details_to",
+        detailsAttribute: "data-geo"
+    });
 
 </script>
 
-<script
-        src="https://maps.googleapis.com/maps/api/js?key=<%=ENV["GOOGLE_API_KEY"]%>&libraries=places&callback=initMap" async defer >
-</script>
+

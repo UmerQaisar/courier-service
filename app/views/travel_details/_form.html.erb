@@ -1,75 +1,70 @@
-<div class=" container mt-5", style="width: 20cm" >
+<div class=" container mt-5" , style="width: 20cm">
 
   <h4 class="my-5">Add Travel Details</h4>
 
-  <%= form_with model: @travel_detail ,local: true do |f| %>
+  <%= form_with model: @travel_detail, :html => { :id => 'geo-details'}, local: true do |f| %>
 
     <div class="input-group mb-4">
-      <%= f.label 'Going From', class:'input-group-text' %>
-      <%= f.text_field :from , class:'form-control' %>
+      <%= f.label 'Going From', class: 'input-group-text' %>
+      <%= f.text_field :from, class: 'form-control' %>
 
       <% if @travel_detail.errors.messages[:from].any? %>
-        <div style="color: #B00100", class="form-control"><%="'From' #{@travel_detail.errors.messages[:from][0]}" %></div>
+        <div style="color: #B00100" , class="form-control"><%= "'From' #{@travel_detail.errors.messages[:from][0]}" %></div>
       <% end %>
-
     </div>
 
 
-    <div class="input-group mb-4">
-      <%= f.label 'Going To', class:'input-group-text' %>
-      <%= f.text_field :to , class:'form-control' %>
+    <div class="input-group my-4">
+      <%= f.label 'Going To', class: 'input-group-text' %>
+      <%= f.text_field :to, class: 'form-control' %>
 
       <% if @travel_detail.errors.messages[:to].any? %>
-        <div style="color: #B00100", class="form-control"><%="'To' #{@travel_detail.errors.messages[:to][0]}" %></div>
+        <div style="color: #B00100" , class="form-control"><%= "'To' #{@travel_detail.errors.messages[:to][0]}" %></div>
       <% end %>
-
     </div>
 
 
-
-
-
-    <div class="input-group mb-4">
-      <%= f.label 'Departure Time', class:'input-group-text' %>
-      <%= f.datetime_field :departure_time , class:'form-control' %>
+    <div class="input-group my-4">
+      <%= f.label 'Departure Time', class: 'input-group-text' %>
+      <%= f.datetime_field :departure_time, class: 'form-control' %>
     </div>
 
     <% if @travel_detail.errors.messages[:departure_time].any? %>
-      <div style="color: #B00100", class="mb-4"><%="#{@travel_detail.errors.messages[:departure_time][0]}" %></div>
+      <div style="color: #B00100" , class="mb-4"><%= "#{@travel_detail.errors.messages[:departure_time][0]}" %></div>
     <% end %>
 
 
 
     <div class="input-group mb-4">
-      <%= f.label 'Arrival Time', class:'input-group-text' %>
-      <%= f.datetime_field :arrival_time , class:'form-control' %>
+      <%= f.label 'Arrival Time', class: 'input-group-text' %>
+      <%= f.datetime_field :arrival_time, class: 'form-control' %>
     </div>
 
     <% if @travel_detail.errors.messages[:arrival_time].any? %>
-      <div style="color: #B00100", class="mb-4"><%="#{@travel_detail.errors.messages[:arrival_time][0]}" %></div>
+      <div style="color: #B00100" , class="mb-4"><%= "#{@travel_detail.errors.messages[:arrival_time][0]}" %></div>
     <% end %>
 
     <div class="input-group mb-4">
-      <%= f.label 'Capacity (KG)', class:'input-group-text' %>
-      <%= f.number_field :capacity, step: 0.5 , class:'form-control' %>
+      <%= f.label 'Capacity (KG)', class: 'input-group-text' %>
+      <%= f.number_field :capacity, step: 0.5, class: 'form-control' %>
 
       <% if @travel_detail.errors.messages[:capacity].any? %>
-        <div style="color: #B00100", class="form-control"><%="Capacity #{@travel_detail.errors.messages[:capacity][0]}" %></div>
+        <div style="color: #B00100" , class="form-control"><%= "Capacity #{@travel_detail.errors.messages[:capacity][0]}" %></div>
       <% end %>
     </div>
 
     <div class="input-group mb-4">
 
-      <%= f.label 'Going by', class:'input-group-text' %>
+      <%= f.label 'Going by', class: 'input-group-text' %>
 
       <div class="form-control">
 
-        <%= f.radio_button :going_by, 'Road', class:'form-check-input ms-3', checked:'checked'  %>
+        <%= f.radio_button :going_by, 'Road', class: 'form-check-input ms-3', checked: 'checked' %>
         <label class="form-check-label">
           Road
         </label>
 
-        <%= f.radio_button :going_by, 'Air', class:'form-check-input ms-3'%>
+        <%= f.radio_button :going_by, 'Air', class: 'form-check-input ms-3' %>
         <label class="form-check-label">
           Air
         </label>
@@ -79,11 +74,20 @@
 
 
     <div class="input-group mb-4">
-      <%= f.label 'Additional Message', class:'input-group-text' %>
-      <%= f.text_area :additional_message , class:'form-control' %>
+      <%= f.label 'Additional Message', class: 'input-group-text' %>
+      <%= f.text_area :additional_message, class: 'form-control' %>
     </div>
 
+<!--    Hidden Fields-->
+    <div class="details_from">
+      <%= f.hidden_field :from_latlng,'data-geo' => "location" %>
+    </div>
 
+    <div class="details_to">
+      <%= f.hidden_field :to_latlng,'data-geo' => "location" %>
+    </div>
+
+<!--    submit button-->
     <div class="">
       <%= f.submit 'Add Service', class: 'col-6 btn btn-primary' %>
     </div>

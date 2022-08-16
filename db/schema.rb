@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_08_04_065357) do
+ActiveRecord::Schema.define(version: 2022_08_15_110957) do
 
   create_table "orders", force: :cascade do |t|
     t.string "package_details"
@@ -34,6 +34,8 @@ ActiveRecord::Schema.define(version: 2022_08_04_065357) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "going_by"
+    t.string "from_latlng"
+    t.string "to_latlng"
     t.index ["user_id"], name: "index_travel_details_on_user_id"
   end
 

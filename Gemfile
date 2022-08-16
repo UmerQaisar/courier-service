@@ -7,6 +7,10 @@ gem 'bootstrap', '~> 5.2.0'
 
 gem 'devise'
 
+gem 'geocoder', '~> 1.8'
+
+gem 'geocomplete_rails'
+
 gem 'will_paginate', '~> 3.3'
 
 gem 'will_paginate-bootstrap4'
