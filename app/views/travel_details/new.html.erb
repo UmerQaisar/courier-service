@@ -7,20 +7,29 @@
         types: ['locality'],
         details: ".details_from",
         detailsAttribute: "data-geo"
+    }).bind('geocode:result', function () {
+        if ($('#travel_detail_to').val() !== "") {
+            setMap()
+        }
     });
 
     $('#travel_detail_to').geocomplete({
         types: ['locality'],
         details: ".details_to",
         detailsAttribute: "data-geo"
-    }).bind('geocode:result', function (event, result) {
-        setMap()
+    }).bind('geocode:result', function () {
+        if ($('#travel_detail_from').val() !== "") {
+            setMap()
+        }
     });
 
     function setMap() {
-        var mapLayer = document.getElementById("map");
+
+        var map= document.getElementById("map");
+        map.style.display = 'block'
         var defaultOptions = {zoom: 8}
-        map = new google.maps.Map(mapLayer, defaultOptions);
+        map = new google.maps.Map(map, defaultOptions);
+
 
         var directionsService = new google.maps.DirectionsService();
         var directionsDisplay = new google.maps.DirectionsRenderer();
@@ -29,10 +38,8 @@
 
         var start = $("#travel_detail_from").val();
         var end = $("#travel_detail_to").val();
-        drawPath(directionsService, directionsDisplay, start, end);
-    }
 
-    function drawPath(directionsService, directionsDisplay, start, end) {
+
         var request = {
             origin: start,
             destination: end,

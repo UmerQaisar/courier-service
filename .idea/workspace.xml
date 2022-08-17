@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="12bd5dbf-4fcb-4d01-ab0b-bbf1b315fff3" name="Changes" comment="Added Jquery and Geocomplete Library to get lat and lng">
+    <list default="true" id="12bd5dbf-4fcb-4d01-ab0b-bbf1b315fff3" name="Changes" comment="Added Map to show direction">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/travel_details/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/travel_details/_form.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/travel_details/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/travel_details/new.html.erb" afterDir="false" />
@@ -176,7 +176,7 @@
       <workItem from="1660547157408" duration="9895000" />
       <workItem from="1660561674528" duration="9732000" />
       <workItem from="1660630322920" duration="22955000" />
-      <workItem from="1660716926127" duration="7181000" />
+      <workItem from="1660716926127" duration="13698000" />
     </task>
     <task id="LOCAL-00001" summary="Second Commit">
       <created>1659625514259</created>
@@ -220,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660652348935</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Added Map to show direction">
+      <created>1660724765117</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1660724765117</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,6 +253,7 @@
     <MESSAGE value="Added Pundit: Used Pundit for Update TravelDetails and on New Orders" />
     <MESSAGE value="Added API Key in Credentials File" />
     <MESSAGE value="Added Jquery and Geocomplete Library to get lat and lng" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Jquery and Geocomplete Library to get lat and lng" />
+    <MESSAGE value="Added Map to show direction" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Map to show direction" />
   </component>
 </project>
