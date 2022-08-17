@@ -14,7 +14,8 @@ class Order < ApplicationRecord
 
   # Custom Validation
   def check_capacity
-    if weight > travel_detail.capacity
+
+    if weight.to_f > travel_detail.capacity.to_f
       errors.add(:weight, "is greater than the capacity of service")
     end
   end

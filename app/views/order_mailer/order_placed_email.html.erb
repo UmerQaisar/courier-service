@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+</head>
+<body>
+  <h5><%= @user.name %></h5> <p>has placed order on your service</p>
+  <br>
+  <h3>Order Details</h3>
+  <h5>Package: </h5> <%= @order.package_details %>
+  <h5>Weight: </h5> <%= @order.weight %>
+  <br>
+  <h3>Customer Details</h3>
+  <h5>Email: </h5> <%= @user.email %>
+  <h5>Name: </h5> <%= @user.name %>
+  <h5>Contact: </h5> <%= @user.contact %>
+</body>
+</html>

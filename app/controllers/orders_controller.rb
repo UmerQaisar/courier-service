@@ -19,6 +19,10 @@ class OrdersController < ApplicationController
     @order.user_id = current_user.id
 
     if @order.save
+      # Sending email to user
+      OrderMailer.with(user: current_user, travel_detail: @travel_detail, order: @order)
+                 .order_placed_email.deliver_now
+
       flash[:notice] = "Order Added  to The Service"
       redirect_to travel_details_path
     else
