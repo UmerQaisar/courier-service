@@ -1,8 +1,9 @@
 <div class=" container mt-5" , style="width: 20cm">
 
+
   <h4 class="my-5">Add Travel Details</h4>
 
-  <%= form_with model: @travel_detail, :html => { :id => 'geo-details'}, local: true do |f| %>
+  <%= form_with model: @travel_detail, local: true do |f| %>
 
     <div class="input-group mb-4">
       <%= f.label 'Going From', class: 'input-group-text' %>
@@ -22,6 +23,8 @@
         <div style="color: #B00100" , class="form-control"><%= "'To' #{@travel_detail.errors.messages[:to][0]}" %></div>
       <% end %>
     </div>
+
+    <div id="map" style="height: 200px"></div>
 
 
     <div class="input-group my-4">

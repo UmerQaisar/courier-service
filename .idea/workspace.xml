@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="12bd5dbf-4fcb-4d01-ab0b-bbf1b315fff3" name="Changes" comment="Added Jquery and Geocomplete Library to get lat and lng">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/travel_details/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/travel_details/_form.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/travel_details/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/travel_details/new.html.erb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,18 +29,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/yasir-southville/courier/app/javascript/packs",
-    "nodejs_package_manager_path": "yarn",
-    "ruby.rails.projectView.checked": "true",
-    "settings.editor.selected.configurable": "reference.settings.ide.settings.notifications"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/yasir-southville/courier/app/javascript/packs&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;ruby.rails.projectView.checked&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.notifications&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/javascript/packs" />
@@ -175,6 +176,7 @@
       <workItem from="1660547157408" duration="9895000" />
       <workItem from="1660561674528" duration="9732000" />
       <workItem from="1660630322920" duration="22955000" />
+      <workItem from="1660716926127" duration="7181000" />
     </task>
     <task id="LOCAL-00001" summary="Second Commit">
       <created>1659625514259</created>
