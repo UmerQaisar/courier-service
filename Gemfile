@@ -11,6 +11,8 @@ gem 'geocoder', '~> 1.8'
 
 gem 'geocomplete_rails'
 
+gem "letter_opener", group: :development
+
 gem 'will_paginate', '~> 3.3'
 
 gem 'will_paginate-bootstrap4'
