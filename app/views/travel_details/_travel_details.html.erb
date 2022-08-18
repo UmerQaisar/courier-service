@@ -1,0 +1,32 @@
+<div class="d-flex my-5">
+  <%= form_with url: travel_details_path, remote: true, method: :get do %>
+    <%= text_field_tag :from_search, params[:from_search], placeholder: "From", class: "form-control col-3  my-1" %>
+    <%= text_field_tag :to_search, params[:to_search], placeholder: "To", class: "form-control col-3 my-1" %>
+    <%= submit_tag 'Search', class: "btn btn-outline-success col-3 my-1" %>
+  <% end %>
+</div>
+
+
+<% if @travel_details.any? %>
+  <% @travel_details.each do |travel_detail| %>
+
+    <div style="margin-bottom: 60px">
+
+      <%= render 'travel_detail', locale = { travel_detail: travel_detail } %>
+
+      <!--      Place Order Button or Details Button-->
+      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <% if travel_detail.user.id != current_user.id %>
+          <%= link_to 'Place Order', new_travel_detail_order_path(travel_detail), class: 'btn btn-outline-danger me-md-2' %>
+        <% else %>
+          <%= link_to 'Details', travel_detail_orders_path(travel_detail), class: 'btn btn-outline-success me-md-2' %>
+        <% end %>
+      </div>
+
+    </div>
+
+  <% end %>
+  <%= will_paginate @travel_details %>
+<% else %>
+  <h5 class="text-center no-service-available h-100">No Service Available</h5>
+<% end %>
