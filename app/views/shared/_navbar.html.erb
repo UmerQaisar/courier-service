@@ -16,7 +16,7 @@
         </li>
 
         <li>
-          <%= link_to 'My Services', current_user_travel_details_travel_details_path, class: "nav-link #{active_class(current_user_travel_details_travel_details_path)} " %>
+          <%= link_to 'My Services', my_travel_details_travel_details_path, class: "nav-link #{active_class(my_travel_details_travel_details_path)} " %>
         </li>
 
         <li>
@@ -44,17 +44,6 @@
           <div class="form-control btn btn-outline-success me-2">
             <%= link_to 'Register' , new_user_registration_path, class:"nav-link" %>
           </div>
-
-        <% end %>
-
-
-        <% if request.path == travel_details_path %>
-
-          <%= form_with url: travel_details_path, method: :get do %>
-            <%= text_field_tag :from_search, params[:from_search], placeholder: "From", class:"form-control me-2" %>
-            <%= text_field_tag :to_search , params[:to_search],  placeholder: "To", class:"form-control me-2"%>
-            <%= submit_tag 'Search', class:"btn btn-outline-success" %>
-          <% end %>
 
         <% end %>
 

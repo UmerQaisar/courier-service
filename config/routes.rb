@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :travel_details do
-    get :current_user_travel_details, on: :collection
+    get :my_travel_details, on: :collection
     resources :orders
   end
 
