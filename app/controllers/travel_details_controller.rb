@@ -10,10 +10,10 @@ class TravelDetailsController < ApplicationController
                                   .paginate(page: params[:page], per_page: 5)
 
     # format is optional
-    # respond_to do |format|
-    #   format.html
-    #   format.js
-    # end
+    respond_to do |format|
+      format.html
+      format.js
+    end
 
   end
 
@@ -49,8 +49,13 @@ class TravelDetailsController < ApplicationController
     end
   end
 
-  def current_user_travel_details
+  def my_travel_details
     @travel_details = TravelDetail.get_current_user_travel_details(current_user.id).paginate(page: params[:page], per_page: 5)
+    # format is optional
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   private
