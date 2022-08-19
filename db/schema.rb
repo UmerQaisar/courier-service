@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_08_15_110957) do
+ActiveRecord::Schema.define(version: 2022_08_19_130603) do
+
+  create_table "items", force: :cascade do |t|
+    t.string "name"
+    t.integer "order_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["order_id"], name: "index_items_on_order_id"
+  end
 
   create_table "orders", force: :cascade do |t|
     t.string "package_details"

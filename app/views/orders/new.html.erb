@@ -8,7 +8,7 @@
 
 
   <div
-    class="container text-center border rounded bg-light"
+    class="container text-center border rounded bg-light mb-4  "
     style="width: 15cm; margin-top: 70px; padding: 20px"
   >
 
@@ -34,6 +34,16 @@
         <% if @order.errors.messages[:weight].any? %>
           <div style="color: #B00100" , class="form-control"><%= "Weight #{@order.errors.messages[:weight][0]}" %></div>
         <% end %>
+      </div>
+
+<!--      Nested fields for Items-->
+      <div class="mb-4">
+        <%= f.fields_for :items do |item| %>
+          <%= render 'item_fields', :f => item %>
+        <% end %>
+
+        <%= link_to_add_association 'Add Item', f, :items, class:'btn btn-outline-primary mt-2' %>
+
       </div>
 
       <div class="">
