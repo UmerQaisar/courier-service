@@ -5,6 +5,8 @@ ruby '2.6.10'
 
 gem 'bootstrap', '~> 5.2.0'
 
+gem "cocoon"
+
 gem 'devise'
 
 gem 'geocoder', '~> 1.8'
@@ -20,6 +22,8 @@ gem 'will_paginate-bootstrap4'
 gem 'jquery-rails'
 
 gem 'popper_js', '~> 2.11.5'
+
+gem "pundit", "~> 2.2"
 
 gem 'dotenv-rails', groups: [:development, :test]
 
@@ -76,4 +80,4 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem "pundit", "~> 2.2"
+
