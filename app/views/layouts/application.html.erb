@@ -17,10 +17,19 @@
 
   <body>
 
+<!--  Nav Bar-->
     <%= render 'shared/navbar' %>
 
+<!--    Toastr JS for showing notification-->
+    <% if flash[:info_toast] %>
+      <script>
+          toastr.info('<%= flash[:info_toast] %>')
+      </script>
+    <% end %>
+
+<!--    BuiltIn flash messages-->
     <% if flash[:notice] %>
-      <p class="alert alert-primary mx-5 my-2"><%= notice %></p>
+      <p class="alert alert-primary mx-5 my-2"><%= flash[:notice] %></p>
     <% end %>
 
     <% if flash[:alert] %>
