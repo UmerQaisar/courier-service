@@ -13,7 +13,6 @@ class OrdersController < ApplicationController
   end
 
   def create
-
     @order = @travel_detail.orders.new(order_params)
     @order.user_id = current_user.id
 
@@ -32,7 +31,7 @@ class OrdersController < ApplicationController
   private
 
   def order_params
-    params.require(:order).permit(:package_details, :weight)
+    params.require(:order).permit(:package_details, :weight, items_attributes: [:name])
   end
 
   def get_travel_detail
