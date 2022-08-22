@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
   #validations
   validates :name, presence: true
-  validates :contact, presence: true , numericality: {only_integer: true , message: 'Number can only contain numbers'}, length: {minimum: 7}
+  validates :contact, presence: true , numericality: {only_integer: true , message: 'Number can only contain digits'}, length: {minimum: 7}
 
   # associations
   has_many :travel_details, dependent: :destroy
