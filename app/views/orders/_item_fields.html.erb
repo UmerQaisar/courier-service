@@ -1,6 +1,11 @@
 <div class="input-group nested-fields my-1">
+
   <%= f.label 'Item Name', class: 'input-group-text' %>
   <%= f.text_field :name, class: 'form-control' %>
+
+  <%# if f.errors.messages[:name].any? %>
+<!--    <div style="color: #B00100" , class="form-control"><%#= "Weight #{f.errors.messages[:name][0]}" %></div>-->
+  <%# end %>
 
   <%= link_to_remove_association 'Remove', f, class:'btn btn-danger' %>
 </div>

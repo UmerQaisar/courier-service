@@ -9,6 +9,14 @@
   <h3>Order Details</h3>
   <h5>Package: </h5> <%= @order.package_details %>
   <h5>Weight: </h5> <%= @order.weight %>
+  <% if @order.items.any? %>
+    <h5>Items: </h5>
+    <% @order.items.each do |item| %>
+      <li><%= item.name %><br></li>
+    <% end %>
+  <% end %>
+
+
   <br>
   <h3>Customer Details</h3>
   <h5>Email: </h5> <%= @user.email %>
