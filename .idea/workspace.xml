@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="12bd5dbf-4fcb-4d01-ab0b-bbf1b315fff3" name="Changes" comment="Added Map to show direction">
+      <change beforePath="$PROJECT_DIR$/.idea/courier.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/courier.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/orders_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/orders_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/item.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/item.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/order_mailer/order_placed_email.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/order_mailer/order_placed_email.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/orders/_item_fields.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/orders/_item_fields.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/travel_details/_travel_detail.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/travel_details/_travel_detail.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,7 +186,7 @@
       <workItem from="1660630322920" duration="22955000" />
       <workItem from="1660716926127" duration="13698000" />
       <workItem from="1660890111274" duration="9299000" />
-      <workItem from="1661148782968" duration="3199000" />
+      <workItem from="1661148782968" duration="5208000" />
     </task>
     <task id="LOCAL-00001" summary="Second Commit">
       <created>1659625514259</created>
