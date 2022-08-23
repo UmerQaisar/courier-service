@@ -60,6 +60,8 @@
     <orderEntry type="library" scope="PROVIDED" name="dotenv-rails (v2.8.1, rbenv: 2.6.10) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="erubi (v1.11.0, rbenv: 2.6.10) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="execjs (v2.8.1, rbenv: 2.6.10) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="factory_bot (v6.2.1, rbenv: 2.6.10) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="factory_bot_rails (v6.2.0, rbenv: 2.6.10) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ffaker (v2.21.0, rbenv: 2.6.10) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ffi (v1.15.5, rbenv: 2.6.10) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="geocoder (v1.8.0, rbenv: 2.6.10) [gem]" level="application" />
@@ -150,6 +152,7 @@
         <option value="devise:controllers" />
         <option value="devise:install" />
         <option value="devise:views" />
+        <option value="factory_bot:model" />
         <option value="generator" />
         <option value="geocoder:config" />
         <option value="geocoder:maxmind:geolite_city" />
@@ -216,6 +219,7 @@
         <option value="devise:controllers" />
         <option value="devise:install" />
         <option value="devise:views" />
+        <option value="factory_bot:model" />
         <option value="generator" />
         <option value="geocoder:config" />
         <option value="geocoder:maxmind:geolite_city" />
@@ -479,6 +483,13 @@
           <RakeTaskImpl description="Restart app by touching tmp/restart.txt" fullCommand="restart" id="restart" />
           <RakeTaskImpl description="Generate a cryptographically secure secret key (this is typically used to generate a secret for cookie sessions)" fullCommand="secret" id="secret" />
           <RakeTaskImpl description="Run all specs in spec directory (excluding plugin specs)" fullCommand="spec" id="spec" />
+          <RakeTaskImpl id="spec">
+            <subtasks>
+              <RakeTaskImpl description="Run the code examples in spec/models" fullCommand="spec:models" id="models" />
+              <RakeTaskImpl description="" fullCommand="spec:prepare" id="prepare" />
+              <RakeTaskImpl description="" fullCommand="spec:statsetup" id="statsetup" />
+            </subtasks>
+          </RakeTaskImpl>
           <RakeTaskImpl description="Report code statistics (KLOCs, etc) from the application or engine" fullCommand="stats" id="stats" />
           <RakeTaskImpl description="Runs all tests in test folder except system ones" fullCommand="test" id="test" />
           <RakeTaskImpl id="test">
@@ -606,12 +617,6 @@
             </subtasks>
           </RakeTaskImpl>
           <RakeTaskImpl description="" fullCommand="routes" id="routes" />
-          <RakeTaskImpl id="spec">
-            <subtasks>
-              <RakeTaskImpl description="" fullCommand="spec:prepare" id="prepare" />
-              <RakeTaskImpl description="" fullCommand="spec:statsetup" id="statsetup" />
-            </subtasks>
-          </RakeTaskImpl>
           <RakeTaskImpl description="" fullCommand="tmp" id="tmp" />
           <RakeTaskImpl description="" fullCommand="tmp/cache" id="tmp/cache" />
           <RakeTaskImpl description="" fullCommand="tmp/cache/assets" id="tmp/cache/assets" />
