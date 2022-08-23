@@ -4,7 +4,7 @@ FactoryBot.define do
     to { FFaker::Address.city }
     departure_time { Time.now + 5.day }
     arrival_time { Time.now + 8.day }
-    capacity { FFaker::rand(1..99) }
+    capacity { 100 }
     going_by { FFaker::Vehicle.model }
     user
   end
