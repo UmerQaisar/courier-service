@@ -17,6 +17,7 @@ RSpec.describe Order, type: :model do
 
     it "when capacity < weight" do
       order.travel_detail.capacity = 5
+      order.weight = 10
       expect(order).not_to be_valid
     end
   end
