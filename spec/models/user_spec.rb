@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
 
-  user = FactoryBot.create(:user)
+  user = build(:user)
 
   context 'should be valid' do
     it "with valid fields" do
