@@ -60,6 +60,7 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Gem for testing
   gem 'rspec-rails', '~> 5.1', '>= 5.1.2'
+  gem 'rails-controller-testing'
   # factory bot Gem
   gem 'factory_bot_rails'
 end

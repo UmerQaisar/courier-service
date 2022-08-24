@@ -5,7 +5,7 @@ class TravelDetailsController < ApplicationController
   # index action
   def index
 
-    @travel_details = TravelDetail.search(params[:from_search],params[:to_search])
+    @travel_details = TravelDetail.search(params[:from_search], params[:to_search])
                                   .where.not(:user_id => current_user.id)
                                   .paginate(page: params[:page], per_page: 5)
 
@@ -17,7 +17,6 @@ class TravelDetailsController < ApplicationController
 
   end
 
-
   def new
     @travel_detail = TravelDetail.new
   end
@@ -26,9 +25,8 @@ class TravelDetailsController < ApplicationController
     authorize @travel_detail
   end
 
-
   def create
-    
+
     @travel_detail = current_user.travel_details.new(travel_detail_params)
 
     if @travel_detail.save
@@ -43,7 +41,7 @@ class TravelDetailsController < ApplicationController
 
     if @travel_detail.update(travel_detail_params)
       flash[:info_toast] = "Service Updated"
-      render 'home/homepage'
+      redirect_to travel_details_path
     else
       render 'edit'
     end
@@ -65,7 +63,7 @@ class TravelDetailsController < ApplicationController
   end
 
   def travel_detail_params
-    params.require(:travel_detail).permit(:to, :from, :departure_time,:arrival_time,:capacity, :additional_message, :going_by, :from_latlng, :to_latlng)
+    params.require(:travel_detail).permit(:to, :from, :departure_time, :arrival_time, :capacity, :additional_message, :going_by, :from_latlng, :to_latlng)
   end
 
 end
