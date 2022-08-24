@@ -48,11 +48,8 @@ RSpec.describe "TravelDetails", type: :request do
   end
 
   describe 'Post /travel_details' do
-
-    let(:travel_detail) {build :travel_detail }
-
     it "Create travel detail" do
-      post '/travel_details', params: { travel_detail: travel_detail.attributes}
+      post '/travel_details', params: { travel_detail: attributes_for(:travel_detail)}
       expect(flash[:info_toast]).to eq('Service Added To The List')
       expect(response).to redirect_to(travel_details_path)
     end
