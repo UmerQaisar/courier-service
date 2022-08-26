@@ -12,9 +12,12 @@
 
 ActiveRecord::Schema.define(version: 2022_08_19_130603) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "items", force: :cascade do |t|
     t.string "name"
-    t.integer "order_id"
+    t.bigint "order_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["order_id"], name: "index_items_on_order_id"
@@ -23,8 +26,8 @@ ActiveRecord::Schema.define(version: 2022_08_19_130603) do
   create_table "orders", force: :cascade do |t|
     t.string "package_details"
     t.string "weight"
-    t.integer "travel_detail_id"
-    t.integer "user_id"
+    t.bigint "travel_detail_id"
+    t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["travel_detail_id"], name: "index_orders_on_travel_detail_id"
@@ -38,7 +41,7 @@ ActiveRecord::Schema.define(version: 2022_08_19_130603) do
     t.datetime "departure_time"
     t.datetime "arrival_time"
     t.string "additional_message"
-    t.integer "user_id"
+    t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "going_by"
