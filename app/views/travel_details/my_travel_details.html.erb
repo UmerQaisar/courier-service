@@ -1,17 +1,24 @@
 <div class="container my-5" style="width: 70%">
 
-  <% @travel_details.each do |travel_detail| %>
+  <% if @travel_details.any? %>
 
-    <div style="margin-bottom: 60px">
+    <h3 class="my-5">My Services</h3>
 
-      <%= render 'travel_detail', locale = {travel_detail: travel_detail}%>
+    <% @travel_details.each do |travel_detail| %>
 
-      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-        <%= link_to 'Details', travel_detail_orders_path(travel_detail), class: 'btn btn-outline-success me-md-2' %>
+      <div style="margin-bottom: 60px">
+
+        <%= render 'travel_detail', locale = { travel_detail: travel_detail } %>
+
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <%= link_to 'Details', travel_detail_orders_path(travel_detail), class: 'btn btn-outline-success me-md-2' %>
+        </div>
+
       </div>
 
-    </div>
-
+    <% end %>
+  <% else %>
+    <h5 class="text-center no-service-available h-100">You have not added any service yet</h5>
   <% end %>
 
   <%= will_paginate @my_travel_details_travel_details_path %>
