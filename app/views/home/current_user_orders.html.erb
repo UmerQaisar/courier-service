@@ -1,12 +1,13 @@
-
 <div class="container" style="margin-top: 40px">
+
+  <h3 class="my-5">My Orders</h3>
 
   <% @orders.each do |order| %>
 
-    <div class="row">
+    <div class="row align-items-center p-3 my-5 border border-secondary rounded-4 bg-primary bg-opacity-10">
 
-      <div class="col-3">
-        <div class="card" style="width: 20rem;">
+      <div class="col-3 ">
+        <div class="card">
           <div class="card-header">
             Package Details
           </div>
@@ -22,16 +23,20 @@
         </div>
       </div>
 
+      <div class="col-1"></div>
+
+      <div class="col-8">
+        <h5>Service Details</h5>
+
+        <div style="width: 20cm">
+          <%= render 'travel_details/travel_detail', locale = { travel_detail: order.travel_detail } %>
+        </div>
+
+      </div>
+
     </div>
 
-    <h3 style="margin: 20px 0px 10px 0px" >Service Details</h3>
+<!--    <hr class="divider w-50" style="margin-bottom: 40px; margin-top: 40px"></hr>-->
 
-    <div style="width: 20cm">
-      <%=  render 'travel_details/travel_detail', locale = {travel_detail: order.travel_detail}%>
-
-    </div>
-
-    <hr class="divider w-50" style="margin-bottom: 40px; margin-top: 40px"></hr>
-
-<% end %>
+  <% end %>
 </div>
