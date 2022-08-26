@@ -40,6 +40,7 @@
       <!--    <hr class="divider w-50" style="margin-bottom: 40px; margin-top: 40px"></hr>-->
 
     <% end %>
+    <%= will_paginate @orders %>
   <% else %>
     <h5 class="text-center no-service-available h-100">You have not placed any order yet</h5>
   <% end %>
