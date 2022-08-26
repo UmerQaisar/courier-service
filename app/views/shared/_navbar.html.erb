@@ -32,17 +32,15 @@
       <form class="d-flex">
 
         <% if user_signed_in? %>
-          <% if request.path != travel_details_path %>
-            <div class="form-control btn btn-danger me-2">
-              <%= link_to 'Sign Out' , destroy_user_session_path, method: :delete, class:"nav-link" %>
-            </div>
-          <% end %>
+          <div class="form-control btn btn-danger me-2">
+            <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: "nav-link" %>
+          </div>
         <% else %>
           <div class="form-control btn btn-success me-2">
-            <%= link_to 'Log In' , new_user_session_path, class:"nav-link" %>
+            <%= link_to 'Log In', new_user_session_path, class: "nav-link" %>
           </div>
           <div class="form-control btn btn-outline-success me-2">
-            <%= link_to 'Register' , new_user_registration_path, class:"nav-link" %>
+            <%= link_to 'Register', new_user_registration_path, class: "nav-link" %>
           </div>
 
         <% end %>
