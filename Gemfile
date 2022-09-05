@@ -3,6 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.10'
 
+gem 'active_model_serializers', '~> 0.10.2'
+
 gem 'bootstrap', '~> 5.2.0'
 
 gem "cocoon"

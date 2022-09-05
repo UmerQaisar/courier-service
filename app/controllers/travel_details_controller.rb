@@ -4,7 +4,6 @@ class TravelDetailsController < ApplicationController
 
   # index action
   def index
-
     @travel_details = TravelDetail.search(params[:from_search], params[:to_search])
                                   .where.not(:user_id => current_user.id)
                                   .paginate(page: params[:page], per_page: 5)
@@ -26,7 +25,6 @@ class TravelDetailsController < ApplicationController
   end
 
   def create
-
     @travel_detail = current_user.travel_details.new(travel_detail_params)
 
     if @travel_detail.save
