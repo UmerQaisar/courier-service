@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   # from home controller
   get :current_user_orders, to: 'home#current_user_orders'
 
+  get :api_key, to: 'home#api_key'
+
   # Routes For API Calls
   namespace :api do
     namespace :v1 do
