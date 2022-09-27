@@ -1,7 +1,6 @@
 module Api::V1
-  class OrdersController < ApplicationController
+  class OrdersController < Api::BaseController
     before_action :get_travel_detail
-    skip_before_action :authenticate_user!, :verify_authenticity_token
 
     def index
       if @travel_detail.nil?
@@ -22,8 +21,9 @@ module Api::V1
     end
 
     def create
-      byebug
       @order = @travel_detail.orders.new(order_params)
+      @order.user_id = @current_user.id
+
       if @order.save
         render json: @order, status: :created
       else
@@ -38,7 +38,7 @@ module Api::V1
     end
 
     def order_params
-      params.require(:order).permit(:package_details, :weight, :user_id)
+      params.require(:order).permit(:package_details, :weight)
     end
 
   end

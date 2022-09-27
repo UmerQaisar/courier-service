@@ -1,5 +1,6 @@
 class OrdersController < ApplicationController
 
+  before_action :authenticate_user!
   before_action :get_travel_detail, only: [:new, :create, :index]
 
   def index

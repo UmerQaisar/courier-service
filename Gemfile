@@ -7,6 +7,8 @@ gem 'active_model_serializers', '~> 0.10.2'
 
 gem 'bootstrap', '~> 5.2.0'
 
+gem 'bcrypt'
+
 gem "cocoon"
 
 gem 'devise'
@@ -22,6 +24,8 @@ gem 'will_paginate', '~> 3.3'
 gem 'will_paginate-bootstrap4'
 
 gem 'jquery-rails'
+
+gem 'jwt'
 
 gem 'popper_js', '~> 2.11.5'
 

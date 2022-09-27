@@ -1,5 +1,6 @@
 class TravelDetailsController < ApplicationController
 
+  before_action :authenticate_user!
   before_action :find_travel_detail, only: [:edit, :update]
 
   # index action

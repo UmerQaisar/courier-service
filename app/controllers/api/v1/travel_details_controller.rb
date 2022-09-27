@@ -1,6 +1,5 @@
 module Api::V1
-  class TravelDetailsController < ApplicationController
-    skip_before_action :authenticate_user!, :verify_authenticity_token
+  class TravelDetailsController < Api::BaseController
 
     def index
       render json: TravelDetail.all
@@ -11,7 +10,7 @@ module Api::V1
     end
 
     def create
-      @travel_detail = TravelDetail.new(travel_detail_params)
+      @travel_detail = @current_user.travel_details.new(travel_detail_params)
 
       if @travel_detail.save
         render json: @travel_detail
@@ -22,7 +21,7 @@ module Api::V1
 
     private
     def travel_detail_params
-      params.require(:travel_detail).permit(:to, :from, :departure_time, :arrival_time, :capacity, :additional_message, :going_by, :user_id)
+      params.require(:travel_detail).permit(:to, :from, :departure_time, :arrival_time, :capacity, :additional_message, :going_by)
     end
 
   end
@@ -36,4 +35,4 @@ end
 # travel_detail[capacity]:100
 # travel_detail[going_by]:Road
 # travel_detail[user_id]:1
-
+#
