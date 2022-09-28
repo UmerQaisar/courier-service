@@ -33,6 +33,33 @@ RSpec.describe TravelDetail, type: :model do
     end
   end
 
+  context "Search Travel Details" do
+    create(:travel_detail , from: "West", to: "North")
+
+    it "should return the searched result for FROM" do
+      travel_details = TravelDetail.search("West","")
+      travel_details.each do |travel|
+        expect(travel.from).to include "West"
+      end
+    end
+
+    it "should return the searched result for TO" do
+      travel_details = TravelDetail.search("","North")
+      travel_details.each do |travel|
+        expect(travel.to).to include "North"
+      end
+    end
+
+    it "should return the searched result for TO and FROM" do
+      travel_details = TravelDetail.search("West","North")
+      travel_details.each do |travel|
+        expect(travel.from).to include "West"
+        expect(travel.to).to include "North"
+      end
+    end
+
+  end
+
   it "should belongs to a user" do
     t = TravelDetail.reflect_on_association(:user)
     expect(t.macro).to eq(:belongs_to)

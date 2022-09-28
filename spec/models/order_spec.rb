@@ -4,7 +4,7 @@ RSpec.describe Order, type: :model do
   order = build(:order)
 
   context 'Should be valid' do
-    it "with valid fields " do
+    it "with valid fields" do
       expect(order).to be_valid
     end
   end

@@ -56,7 +56,6 @@ RSpec.describe "TravelDetails", type: :request do
 
     it "should not create travel detail with invalid attributes" do
       travel_detail_invalid = attributes_for(:travel_detail, from: nil, to: nil )
-
       post '/travel_details', params: { travel_detail: travel_detail_invalid}
       expect(response).to render_template :new
     end
@@ -91,8 +90,11 @@ RSpec.describe "TravelDetails", type: :request do
       put  "/travel_details/#{travel_detail.id}", params: {travel_detail: travel_detail_invalid}
       expect(response).to render_template :edit
     end
+
+    it 'should not goto edit when current user is not equal to travel details user' do
+      travel_detail.user = create(:user)
+      get  "/travel_details/#{travel_detail.id}/edit", params: {travel_detail: attributes_for(:travel_detail)}
+      expect(flash[:alert]).to eq("You are not authorized to perform this action.")
+    end
   end
-
-
-
 end
